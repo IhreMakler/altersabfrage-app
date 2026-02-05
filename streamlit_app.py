@@ -253,7 +253,7 @@ with col2:
 # Initialisiere Session State für Eingabe und Ergebnis
 if "age_input" not in st.session_state:
     st.session_state.age_input = None
-if "result_message" not in st.session_state:
+Geben Sie Ihr Alter ein und lassen Sie es überprüfen - schnell, vertraulich und zuverlässig.
     st.session_state.result_message = None
 if "show_result" not in st.session_state:
     st.session_state.show_result = False
@@ -375,4 +375,5 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
