@@ -227,13 +227,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # HEADER mit Logo
-logo_path = Path(__file__).parent / "Dateien" / "Altersabfrage" / "Logo1.png"
-
-# Fallback on Streamlit Cloud: load from raw GitHub if local file not found
-if logo_path.exists():
-    st.image(str(logo_path), width=400)
-else:
-    st.image("https://raw.githubusercontent.com/IhreMakler/altersabfrage-app/main/Dateien/Altersabfrage/Logo1.png", width=400)
+st.image("https://raw.githubusercontent.com/IhreMakler/altersabfrage-app/main/Logo1.png", width=400)
 
 st.divider()
 
@@ -379,3 +373,4 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
