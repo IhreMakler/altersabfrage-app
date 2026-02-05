@@ -225,14 +225,19 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # HEADER mit Logo
-st.image("Dateien/Altersabfrage/Logo1.png", width=400)
-st.divider()
+# HEADER mit Logo
+try:
+    # Versuche erst lokal zu laden
+    logo_path = Path(__file__).parent / "Dateien" / "Altersabfrage" / "Logo1.png"
+    if logo_path.exists():
+        st.image(str(logo_path), width=400)
+    else:
+        raise FileNotFoundError
+except (FileNotFoundError, Exception):
+    # Fallback: Von GitHub laden (für Streamlit Cloud)
+    st.image("https://raw.githubusercontent.com/IhreMakler/altersabfrage-app/main/Dateien/Altersabfrage/Logo1.png", width=400)
 
-# MAIN HEADER
-st.markdown("""
-<div class="main-header">
-    <h1>🏠 Altersabfrage</h1>
-    <p>Ihre professionelle Altersverifikation | Schnell • Fair • Sicher</p>
+st.divider()
 </div>
 """, unsafe_allow_html=True)
 
@@ -370,3 +375,4 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
