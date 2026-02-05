@@ -246,7 +246,7 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.markdown("""
     <p style="text-align: center; color: #555; margin-bottom: 2rem; font-size: 1.05em;">
-    Geben Sie Ihr Alter ein und lassen Sie es überprüfen – schnell, vertraulich und zuverlässig.
+    Geben Sie Ihr Alter ein und lassen Sie es überprüfen - schnell, vertraulich und zuverlässig.
     </p>
     """, unsafe_allow_html=True)
 
@@ -375,5 +375,6 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
